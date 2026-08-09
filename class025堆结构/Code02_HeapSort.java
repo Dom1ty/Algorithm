@@ -33,4 +33,33 @@ public class Code02_HeapSort {
             l = 2 * i + 1;
         }
     }
+
+    //O(n * logN)
+    //进堆  O(n * logN)
+    // 调整 O(n * logN)
+    public static void heapSort1(int[] arr) {
+        int n = arr.length;
+        for (int i = 0; i < n; i++) {
+            heapInsert(arr, i);
+        }
+        int size = n;
+        while(size > 1){
+            swap(arr, 0, --size);
+            heapify(arr, 0, size);
+        }
+    }
+
+
+
+    public static void heapSort2(int[] arr) {
+        int n = arr.length;
+        for (int i = n - 1; i >= 0; i--) {
+            heapify(arr, i, n);
+        }
+        int size = n;
+        while(size > 1){
+            swap(arr, 0, --size);
+            heapify(arr, 0, size);
+        }
+    }
 }
