@@ -5,6 +5,7 @@ import java.util.PriorityQueue;
 
 public class MaxCover {
 
+    // https://leetcode.cn/problems/divide-intervals-into-minimum-number-of-groups/
     public static int minGroups(int[][] meeting) {
         int n = meeting.length;
         Arrays.sort(meeting, (a, b) -> a[0] - b[0]);
