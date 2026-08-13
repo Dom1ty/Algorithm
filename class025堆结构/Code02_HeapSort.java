@@ -50,7 +50,7 @@ public class Code02_HeapSort {
     }
 
 
-
+    //大根堆 每次 把 最大值调整的数组的最后 然后size --
     public static void heapSort2(int[] arr) {
         int n = arr.length;
         for (int i = n - 1; i >= 0; i--) {
